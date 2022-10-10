@@ -1,4 +1,4 @@
-# Exercises
+# Events
 
 ## Exercises: Level 1
 
@@ -12,5 +12,3 @@
 8. Display the coordinate of the view port when a mouse is moving on the body?
 9. What is the difference between onInput, onChange and onBlur?
 10. Where do we put the onSubmit event ?
-
-## Exercises: Level 2

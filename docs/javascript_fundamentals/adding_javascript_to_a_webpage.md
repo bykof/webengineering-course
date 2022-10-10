@@ -4,7 +4,6 @@ JavaScript can be added to a web page in three different ways:
 
 - **_Inline script_**
 - **_Internal script_**
-- **_External script_**
 - **_Multiple External scripts_**
 
 The following sections show different ways of adding JavaScript code to your web page.

@@ -1,4 +1,4 @@
-# Exercises: Components
+# Components
 
 ## Exercises: Level 1
 
@@ -11,7 +11,3 @@
 7. Make a reusable Button component.
 8. Make a reusable InputField component.
 9. Make a reusable alert box component with one div parent element and one p child element of the div(warning alert box, success alert box).
-
-## Exercises: Level 2
-
-## Exercises: Level 3

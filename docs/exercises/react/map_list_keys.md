@@ -1,4 +1,4 @@
-# Exercises
+# Map List Keys
 
 ## Exercises: Level 1
 
@@ -7,6 +7,3 @@
 3. What is the importance of destructuring your code ?
 4. Does destructuring make your code clean and easy to read ?
 
-## Exercises: Level 2
-
-## Exercises: Level 3

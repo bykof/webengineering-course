@@ -1,4 +1,4 @@
-# Exercises
+# Setting Up
 
 ## Exercises: Level 1
 
@@ -12,7 +12,3 @@
 8. What is your favorite code editor (I believe that it is Visual Studio Code)?
 9. Add different Visual Studio Code extensions to improve your productivity(eg. prettier, ESLint etc).
 10. Try to make a different custom module in a different file and import it to index.js.
-
-## Exercises: Level 2
-
-## Exercises: Level 3

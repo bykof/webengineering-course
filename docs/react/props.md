@@ -6,7 +6,7 @@ Props is a special keyword in React that stands for properties and is being used
 
 I hope you are familiar with the JavaScript function. Most of the time, functions with parameters are smart and they can take dynamic data likewise props is a way we pass data or parameter to a component. Let's see the difference between a function and a component.
 
-```jsx
+```js
 // function syntax
 const getUserInfo = (firstName, lastName, country) => {
   return `${firstName} ${lastName}. Lives in ${country}.`;
@@ -419,7 +419,7 @@ root.render(
 
 You can define default or optional props, by assigning values or defining undefined to them:
 
-```jsx
+```js
 import React from "react";
 import ReactDOM from "react-dom/client";
 

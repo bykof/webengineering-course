@@ -192,7 +192,7 @@ Updates scheduled inside useLayoutEffect will be flushed synchronously, before t
 
 `useDebugValue` shows a value in React DevTools.
 
-```jsx
+```js
 function useFriendStatus(friendID) {
   const [isOnline, setIsOnline] = useState(null);
 
@@ -206,7 +206,7 @@ function useFriendStatus(friendID) {
 
 `useDeferredValue` receives a state variable and returns a new state variable, which will wait until all rendering finishes for the given state variable and then rerenders the deferred value.
 
-```jsx
+```js
 function Typeahead() {
   const query = useSearchQuery("");
   const deferredQuery = useDeferredValue(query);
@@ -246,7 +246,7 @@ function Typeahead() {
 
     `useId` is not for generating keys in a list. Keys should be generated from your data.
 
-```jsx
+```js
 function Checkbox() {
   const id = useId();
   return (

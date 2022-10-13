@@ -8,7 +8,7 @@ Here are the component lifecycles listed.
 
 Let's talk about that a little bit deeper:
 
-```jsx
+```js
 import * as ReactDOM from "react-dom/client";
 
 function Component({ prop }) {

@@ -23,7 +23,7 @@ In the previous section we agreed, that a website or an application is made of b
 
 Using a JavaScript function, we can make a functional React component.
 
-```jsx
+```js
 function ComponentName() {
   return <p>Content</p>;
 }
@@ -31,7 +31,7 @@ function ComponentName() {
 
 The following expressions are a JSX element.
 
-```jsx
+```js
 function Header() {
   const title = "Getting Started React";
   const author = {
@@ -54,7 +54,7 @@ function Header() {
 }
 ```
 
-```jsx
+```js
 function Header() {
   return (
     <header>
@@ -74,7 +74,7 @@ Now, lets change all the JSX elements we had to components. When we call JSX ele
 
 Let's render first the `Header` component.
 
-```jsx title="index.js"
+```js title="index.js"
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -92,7 +92,7 @@ root.render(<React.StrictMode><Header/></React.StrictMode>);
 
 Now, let's create an App component, that will wrap the Header, Main and Footer. Then the App component will be render on the DOM.
 
-```jsx title="index.js"
+```js title="index.js"
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -249,7 +249,7 @@ const Button = () => <button style={buttonStyles}> action </button>;
 
 The Button component is a dumb component, because it does not take any parameters and we cannot change the action text dynamically. We need to pass props to the button, to change the value dynamically. We will see props in the next section. Before we close today's lesson let's make another, more functional component, which displays a random hexadecimal number.
 
-```jsx
+```js
 import React from "react";
 import ReactDOM from "react-dom/client";
 

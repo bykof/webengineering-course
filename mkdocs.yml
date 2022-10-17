@@ -24,11 +24,12 @@ nav:
       - react/forms.md
       - react/component_lifecycles.md
       - react/controlled_versus_uncontrolled.md
-      - react/fetch_and_useQuery.md
-      - react/react-router.md
       - react/context.md
       - react/custom_hooks.md
+      - react/fetch_and_useQuery.md
+      - react/react-router.md
       - react/chakra-ui.md
       - react/project_structure.md
   - Exercises:
       - exercises/index.md
+      - exercises/01_javascript/index.md

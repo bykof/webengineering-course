@@ -32,7 +32,7 @@ nav:
       - react/project_structure.md
   - Exercises:
       - exercises/index.md
-      - exercises/01_javascript/index.md
+      # - exercises/01_javascript/index.md
       # - exercises/02_web_ui/index.md
 theme:
   name: material

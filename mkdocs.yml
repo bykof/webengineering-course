@@ -1,6 +1,4 @@
 site_name: React Lecture
-theme:
-  name: material
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -13,6 +11,8 @@ markdown_extensions:
 
 nav:
   - index.md
+  - Folien:
+      Einführung: folien/einfuehrung.pdf
   - React:
       - react/getting_started.md
       - react/setting_up.md
@@ -33,3 +33,23 @@ nav:
   - Exercises:
       - exercises/index.md
       - exercises/01_javascript/index.md
+      # - exercises/02_web_ui/index.md
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: lime
+      accent: yellow
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top

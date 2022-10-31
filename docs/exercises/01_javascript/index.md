@@ -1,5 +1,7 @@
 # JavaScript
 
+[Demo](./demo.md)
+
 !!! note
 
     You have time until 23:59 on 6th November 2022

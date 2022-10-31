@@ -1,5 +1,10 @@
 # JavaScript
 
+!!! note
+
+    You have time until 23:59 on 6th November 2022
+    Please send your result as an `index.html` to `michael.bykovski@hs-rm.de`.
+
 Create a Web Shop with JavaScript Fundamentals.
 Use functions, classes, arrays, objects, alert, prompt and so on.
 
@@ -26,7 +31,7 @@ The menu is:
 
 ---
 
-### `1. Liste aller Produkte` 
+### `1. Liste aller Produkte`
 
 lists all created products in the form: `#id name formattedPrice EUR`.
 
@@ -38,7 +43,7 @@ As example:
 
 ---
 
-### `2. Liste aller Kunden` 
+### `2. Liste aller Kunden`
 
 lists all created customers in the form: `#id firstName lastName`.
 
@@ -50,7 +55,7 @@ As example:
 
 ---
 
-### `3. Liste aller Käufe` 
+### `3. Liste aller Käufe`
 
 lists all created orders in the form: `#id createdDate formattedPrice EUR firstName lastName`.
 
@@ -62,7 +67,7 @@ As example:
 
 ---
 
-### `4. Produkt hinzufügen` 
+### `4. Produkt hinzufügen`
 
 creates a new product.
 
@@ -75,7 +80,7 @@ If the user clicks on "Cancel" or "Abbrechen", you redirect to the menu again.
 
 ---
 
-### `5. Kunde hinzufügen` 
+### `5. Kunde hinzufügen`
 
 creates a new customer.
 
@@ -86,7 +91,7 @@ If the user clicks on "Cancel" or "Abbrechen", you redirect to the menu again.
 
 ---
 
-### `6. Kauf hinzufügen` 
+### `6. Kauf hinzufügen`
 
 creates a new order.
 
@@ -98,7 +103,7 @@ If the user clicks on "Cancel" or "Abbrechen", you redirect to the menu again.
 
 ---
 
-### `7. Produkt zum Kauf hinzufügen` 
+### `7. Produkt zum Kauf hinzufügen`
 
 adds a product with a specific amount to the order.
 
@@ -113,7 +118,7 @@ If the user clicks on "Cancel" or "Abbrechen", you redirect to the menu again.
 
 ---
 
-### `8. Produkt ändern` 
+### `8. Produkt ändern`
 
 changes a product.
 
@@ -133,7 +138,7 @@ If the user clicks on "Cancel" or "Abbrechen", you redirect to the menu again.
 
 ---
 
-### `9. Kunde ändern` 
+### `9. Kunde ändern`
 
 changes a customer.
 
@@ -153,7 +158,7 @@ If the user clicks on "Cancel" or "Abbrechen", you redirect to the menu again.
 
 ---
 
-### `10. Kaufdetails` 
+### `10. Kaufdetails`
 
 prints a detailed version of an order.
 
@@ -166,7 +171,7 @@ The format is:
 ```
 Kunde: #1 - Michael Bykovski
 
-Produkte: 
+Produkte:
 
 - 3x #1 - Test (1.23 EUR) = 3.69 EUR
 - 4x #2 - Noch ein Test (3.21 EUR) = 12.84 EUR
@@ -193,4 +198,3 @@ The price is saved in cents. So if the price is: `100` that's `100 Cents` which 
 
 Orders save the current customer, BUT they make a **copy** of the customer, because the customer can change and we want to store the customer values to the moment, where the customer bought the products.
 Also products are **copied**, because the price of a product can change afterwards.
-

@@ -1,4 +1,4 @@
-site_name: React Lecture
+site_name: Webengineering Lectures
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

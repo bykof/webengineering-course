@@ -4,7 +4,7 @@
 
 ```javascript
 const wait = (callback) => {
-  setTimeout(2000, callback);
+  setTimeout(callback, 2000);
 };
 ```
 
@@ -56,7 +56,7 @@ class Response {
 
 const fetch = () => {
   return new Promise((resolve, reject) => {
-    return new Reponse();
+    return resolve(new Response());
   });
 };
 

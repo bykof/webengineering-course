@@ -34,7 +34,7 @@ nav:
       - exercises/index.md
       - exercises/promises.md
       - exercises/01_javascript/index.md
-      # - exercises/02_web_ui/index.md
+      - exercises/02_web_ui/index.md
 theme:
   name: material
   palette:

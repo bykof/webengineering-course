@@ -16,6 +16,7 @@ Hint2: You are allowed to build a "rendering" logic like React.
 
 You are allowed to create HTML elements, before the script starts, **but** all updating elements should be created by JavaScript.
 Your are **not** allowed to "precreate" elements in HTML and copy those elements.
+You are **not** allowed to use "innerHTML".
 
 You are **not** allowed to use any libraries or frameworks. The code should be vanilla JavaScript.
 

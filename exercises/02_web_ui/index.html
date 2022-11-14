@@ -13,7 +13,7 @@
     
     
       
-        <title>Index - Webengineering Lectures</title>
+        <title>Web UI - Webengineering Lectures</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#web-ui" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Web UI
             
           </span>
         </div>
@@ -218,13 +223,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Exercises
       </a>
     </li>
@@ -590,12 +597,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -654,6 +663,30 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Web UI
+      </a>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -677,6 +710,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -690,9 +725,45 @@
                 
 
 
-  <h1>Index</h1>
-
-
+<h1 id="web-ui">Web UI</h1>
+<p><a href="demo/">Demo</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have time until 23:59 on 20th November 2022.</p>
+<p>Please send your result as an index.html (optionally index.js) to michael.bykovski@hs-rm.de.</p>
+</div>
+<p>Create a webshop with Web UI.
+Use the web api of the browser to create, remove and change elements in the browser.</p>
+<p>Hint: Use stores that represent your data in a class and update after you change those stores.
+Hint2: You are allowed to build a "rendering" logic like React.</p>
+<p>You are allowed to create HTML elements, before the script starts, <strong>but</strong> all updating elements should be created by JavaScript.
+Your are <strong>not</strong> allowed to "precreate" elements in HTML and copy those elements.</p>
+<p>You are <strong>not</strong> allowed to use any libraries or frameworks. The code should be vanilla JavaScript.</p>
+<h1 id="task">Task</h1>
+<p>Create a Webshop, where you can create Customers, Articles and Orders.</p>
+<h1 id="customers">Customers</h1>
+<p>You have to check for the input that was entered.
+First Name and Last Name are required and should be prompted if the user has not input the data:</p>
+<p><img alt="" src="examples/customer_error.png" /></p>
+<h1 id="articles">Articles</h1>
+<p>You have to check for the input that was entered.
+Name and Price are required and should be prompted if the user has not input the data:
+Price should be an integer value and should be prompted if the user has not input it correctly.</p>
+<p><img alt="" src="examples/article_required.png" /></p>
+<hr />
+<p><img alt="" src="examples/article_int.png" /></p>
+<h1 id="order">Order</h1>
+<p>First the user is able to create as many orders as he/she wants.</p>
+<p>After that the user is able to select a customer or articles from a dropdown.
+The user has to confirm his/her selection with a button.</p>
+<p><img alt="" src="examples/order_selection.png" /></p>
+<p>If a new article gets created or a new customer gets created, the dropdown should refresh accordingly with the new values.</p>
+<p>It doesn't matter if a customer or an article gets added.
+The UI should display always the current state of the order as text in the head of the box.</p>
+<p><img alt="" src="examples/order_selection_order.gif" /></p>
+<p>A customer can be choosed only once.</p>
+<p>An article can be added multiple times. There is also the possibility to remove an article.
+If there is no amount from an article anymore, the article should be removed from the list.</p>
 
 
 
@@ -711,6 +782,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../01_javascript/" class="md-footer__link md-footer__link--prev" aria-label="Previous: JavaScript" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              JavaScript
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

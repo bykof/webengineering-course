@@ -6,7 +6,7 @@ Create a ToDo List with React
 
 ## Calculator
 
-Create a calculator
+Create a calculator with React
 
 ## TIC TAC TOE
 

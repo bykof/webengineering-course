@@ -20,6 +20,7 @@ nav:
       - react/props.md
       - react/map_list_keys.md
       - react/hooks.md
+      - react/conditional_rendering.md
       - react/events.md
       - react/forms.md
       - react/component_lifecycles.md
@@ -35,6 +36,7 @@ nav:
       - exercises/promises.md
       - exercises/01_javascript/index.md
       - exercises/02_web_ui/index.md
+      - exercises/react.md
 theme:
   name: material
   palette:

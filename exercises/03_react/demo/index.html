@@ -1,0 +1,34 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="app">
+      <h1>Customers</h1>
+      <form id="customerForm">
+        <label for="customer.firstName">First Name*</label><br />
+        <input type="text" id="customer.firstName" /><br />
+        <label for="customer.lastName">Last Name*</label><br />
+        <input type="text" id="customer.lastName" /><br />
+        <br />
+        <button type="submit">Create</button>
+      </form>
+      <ul id="customers-list"></ul>
+      <hr />
+
+      <h1>Articles</h1>
+      <form id="articlesForm">
+        <label for="article.name">Name*</label><br />
+        <input type="text" id="article.name" /><br />
+        <label for="article.price">Price*</label><br />
+        <input type="text" id="article.price" /><br />
+        <br />
+        <button type="submit">Create</button>
+      </form>
+      <ul id="articles-list"></ul>
+      <hr />
+      <h1>Orders</h1>
+      <button type="button" id="createOrder">Create</button>
+      <ul id="orders-list"></ul>
+    </div>
+  </body>
+  <script src="./index.min.js"></script>
+</html>

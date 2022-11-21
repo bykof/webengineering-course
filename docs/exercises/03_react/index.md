@@ -1,4 +1,4 @@
-# React
+# React Online Shop
 
 [Demo](./demo/index.html)
 

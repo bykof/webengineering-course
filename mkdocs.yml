@@ -38,6 +38,7 @@ nav:
       - exercises/02_web_ui/index.md
       - exercises/react.md
       - exercises/03_react/index.md
+      - exercises/04_project/index.md
 theme:
   name: material
   palette:

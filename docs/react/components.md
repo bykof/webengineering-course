@@ -4,8 +4,8 @@ A React component is a small, reusable code, which is responsible for one part o
 
 Components can be:
 
-- Functional Component / Presentational Component / Stateless Component / Dumb Component
-- Class Component / Container Component / Stateful Component / Smart Component
+-   Functional Component / Presentational Component / Stateless Component / Dumb Component
+-   Class Component / Container Component / Stateful Component / Smart Component
 
 The classification of components above does not work for the latest version of React, but it is good to know the former definition and how the previous versions work.
 
@@ -23,253 +23,190 @@ In the previous section we agreed, that a website or an application is made of b
 
 Using a JavaScript function, we can make a functional React component.
 
-```js
-function ComponentName() {
-  return <p>Content</p>;
-}
-```
+This example is the most simple React Component you can image:
 
-The following expressions are a JSX element.
+!!! example
 
-```js
-function Header() {
-  const title = "Getting Started React";
-  const author = {
-    firstName: "Michael",
-    lastName: "Bykovski",
-  };
+    ```js
+    function ComponentName() {
+        return <p>Content</p>
+    }
+    ```
 
-  const content = (
-    <header>
-      <div>
-        <h1>Welcome to Webengineering</h1>
-        <h2>{title}</h2>
-        <p>
-          Instructor: {author.firstName} {author.lastName}
-        </p>
-      </div>
-    </header>
-  );
-  return content;
-}
-```
+As we know already you can define variables and set the values in JSX:
 
-```js
-function Header() {
-  return (
-    <header>
-      <div>
-        <h1>Welcome to Webengineering</h1>
-        <h2>Getting Started React</h2>
-        <p>Instructor: Michael Bykovski</p>
-      </div>
-    </header>
-  );
-}
-```
+!!! example
 
-### Rendering components
+    ```js
+    function Component() {
+        const user = {
+            firstName: 'Test',
+            lastName: 'Tester',
+        }
 
-Now, lets change all the JSX elements we had to components. When we call JSX element we use curly brackets and when we call components we do as follows `<ComponentName />`. If we pass an attribute, when we call the component name, we call it props `<ComponentName propsName={'propsValue'} />`.
+        return (
+            <>
+                <p>{user.firstName}</p>
+                <p>{user.lastName}</p>
+            </>
+        )
+    }
+    ```
 
-Let's render first the `Header` component.
+Also you can define styles in the Component:
 
-```js title="index.js"
-import React from "react";
-import ReactDOM from "react-dom";
+!!! example
 
-function Header() (
-  <header>
-    <div>
-      <h1>Welcome to Web Engineering</h1>
-    </div>
-  </header>
-);
+    ```js
+    function Component() {
+        const user = {
+            firstName: 'Test',
+            lastName: 'Tester',
+        }
+        const firstNameStyles = {
+            fontSize: '24px',
+        }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<React.StrictMode><Header/></React.StrictMode>);
-```
+        const lastNameStyles = {
+            fontSize: '18px',
+            color: 'red',
+        }
 
-Now, let's create an App component, that will wrap the Header, Main and Footer. Then the App component will be render on the DOM.
+        return (
+            <>
+                <p style={firstNameStyles}>First Name: {user.firstName}</p>
+                <p style={lastNameStyles}>{user.lastName}</p>
+            </>
+        )
+    }
+    ```
 
-```js title="index.js"
-import React from "react";
-import ReactDOM from "react-dom/client";
+If you run the example above in Babel you get following JavaScript Code:
 
-const author = {
-  firstName: "Michael",
-  lastName: "Bykovski",
-};
+!!! example
 
-function Header() {
-  const welcome = "Welcome to Webengineering";
-  const title = "Getting Started React";
-  const subtitle = "JavaScript Library";
-  const date = "18. August 2022";
-  return (
-    <header>
-      <div>
-        <h1>{welcome}</h1>
-        <h2>{title}</h2>
-        <h3>{subtitle}</h3>
-        <p>
-          Instructor: {author.firstName} {author.lastName}
-        </p>
-        <small>Date: {date}</small>
-      </div>
-    </header>
-  );
-}
+    ```js
+    'use strict'
 
-function Main() {
-  const numOne = 3;
-  const numTwo = 2;
+    function Component() {
+        const user = {
+            firstName: 'Test',
+            lastName: 'Tester',
+        }
+        const firstNameStyles = {
+            fontSize: '24px',
+        }
+        const lastNameStyles = {
+            fontSize: '18px',
+            color: 'red',
+        }
+        return /*#__PURE__*/ React.createElement(
+            React.Fragment,
+            null,
+            /*#__PURE__*/ React.createElement(
+                'p',
+                {
+                    style: firstNameStyles,
+                },
+                'First Name: ',
+                user.firstName,
+            ),
+            /*#__PURE__*/ React.createElement(
+                'p',
+                {
+                    style: lastNameStyles,
+                },
+                user.lastName,
+            ),
+        )
+    }
+    ```
 
-  const result = (
-    <p>
-      {numOne} + {numTwo} = {numOne + numTwo}
-    </p>
-  );
+As you see, you actually call `React.createElement` and pass in the element name + the variables you defined.
 
-  const yearBorn = 1994;
-  const currentYear = new Date().getFullYear();
-  const age = currentYear - yearBorn;
-  const personAge = (
-    <p>
-      {author.firstName} {author.lastName} is {age} years old
-    </p>
-  );
-  const techs = ["HTML", "CSS", "JavaScript"];
-  const techsFormatted = techs.map((tech) => <li>{tech}</li>);
-  return (
-    <main>
-      <div>
-        <p>
-          Prerequisite to get started{" "}
-          <strong>
-            <em>react.js</em>
-          </strong>
-          :
-        </p>
-        <ul>{techsFormatted}</ul>
-        {result}
-        {personAge}
-      </div>
-    </main>
-  );
-}
+The result of the example is:
 
-function Footer() {
-  const copyRight = "Copyright 2022";
-  return (
-    <footer>
-      <div className="footer-wrapper">
-        <p>{copyRight}</p>
-      </div>
-    </footer>
-  );
-}
+!!! example
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
-}
+    ```html
+    <p style="font-size: 24px;">First Name: Test</p>
+    <p style="font-size: 18px; color: red;">Tester</p>
+    ```
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
+## Nesting React Components
 
-### Injecting data to JSX in React Component
+Let's image you have a component, which you would like to insert into another component.
+Let's see this example:
 
-So far, we used static data on the JSX elements. Now let's pass different data types as dynamic data. The dynamic data could be strings, numbers, booleans, arrays or objects. Let us see each of the data types step by step. To inject data to a JSX we use the {} bracket.
+!!! example
 
-In this section we inject only strings
+    ```js
+    function Text() {
+        return <p>Some Text</p>
+    }
 
-```js
-import React from "react";
-import ReactDOM from "react-dom";
+    function Wrapper() {
+        return (
+            <>
+                {Text()}
+                {Text()}
+                {Text()}
+            </>
+        )
+    }
+    ```
 
-const welcome = "Welcome to 30 Days Of React";
-const title = "Getting Started React";
-const subtitle = "JavaScript Library";
-const firstName = "Asabeneh";
-const lastName = "Yetayeh";
-const date = "Oct 3, 2020";
+Because this is not the way `Components` are meant for, you can actually use React Component Functions as JSX Elements.
 
-// JSX element, header
-const header = () => {
-  return (
-    <header>
-      <div className="header-wrapper">
-        <h1>{welcome}</h1>
-        <h2>{title}</h2>
-        <h3>{subtitle}</h3>
-        <p>
-          Instructor: {firstName} {lastName}
-        </p>
-        <small>Date: {date}</small>
-      </div>
-    </header>
-  );
-};
-const rootElement = document.getElementById("root");
-// we render the App component using the ReactDOM package
-ReactDOM.render(<Header />, rootElement);
-```
+Components are made for sharing. Because of that, components should be nestable.
+You can use React Components as JSX Elements to render them out.
+Let's check a simple example first:
 
-### Further on Functional components
+!!! example
 
-Let's create more components. What is the smallest size of a component? A component that returns only a single HTML as JSX is considered as a small component. A button component or an alert box component, or just an input field component.
+    ```js
+    function Text() {
+        return <p>Some Text</p>
+    }
 
-```js
-const Button = () => <button>action</button>;
-```
+    function Wrapper() {
+        return (
+            <>
+                <Text />
+                <Text />
+                <Text />
+            </>
+        )
+    }
+    ```
 
-The `Button` component is made of a single HTML button element.
-Let's style this button using JavaScript style object. All CSS properties should be camelCase to make a JavaScript CSS object. If we pass a number without unit as CSS value, it is considered as px. See the example below.
+    output:
 
-```js
-const buttonStyles = {
-  padding: "10px 20px",
-  background: "rgb(0, 255, 0",
-  border: "none",
-  borderRadius: 5,
-};
-const Button = () => <button style={buttonStyles}> action </button>;
-```
+    ```html
+    <p>Some Text</p>
+    <p>Some Text</p>
+    <p>Some Text</p>
+    ```
 
-The Button component is a dumb component, because it does not take any parameters and we cannot change the action text dynamically. We need to pass props to the button, to change the value dynamically. We will see props in the next section. Before we close today's lesson let's make another, more functional component, which displays a random hexadecimal number.
+if you check the Babel output this is what happens:
 
-```js
-import React from "react";
-import ReactDOM from "react-dom/client";
+!!! example
 
-// Hexadecimal color generator
-const hexaColor = () => {
-  let str = "0123456789abcdef";
-  let color = "";
-  for (let i = 0; i < 6; i++) {
-    let index = Math.floor(Math.random() * str.length);
-    color += str[index];
-  }
-  return "#" + color;
-};
+    ```js
+    'use strict'
 
-const HexaColor = () => <div>{hexaColor()}</div>;
+    function Text() {
+        return /*#__PURE__*/ React.createElement('p', null, 'Some Text')
+    }
+    function Wrapper() {
+        return /*#__PURE__*/ React.createElement(
+            React.Fragment,
+            null,
+            /*#__PURE__*/ React.createElement(Text, null),
+            /*#__PURE__*/ React.createElement(Text, null),
+            /*#__PURE__*/ React.createElement(Text, null),
+        )
+    }
+    ```
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <HexaColor />
-  </React.StrictMode>
-);
-```
+The actual function `Text` gets inserted into `React.createElement`.

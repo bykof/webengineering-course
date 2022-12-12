@@ -6,7 +6,7 @@ Install openapi-generator according to the `Getting Started`.
 You can generate an openapi client by using this:
 
 ```
-openapi-generator-cli generate -g javascript -o out -i https://webeng.mi.hs-rm.de/docs/json
+openapi-generator-cli generate -g javascript -o out -i https://webeng.mi.hs-rm.de/docs/json --additional-properties=usePromises=true
 ```
 
 Demo: [Github Repository](https://github.com/bykof/webengineering-openapi-demo)

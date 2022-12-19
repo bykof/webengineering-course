@@ -569,6 +569,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../component_structure/" class="md-nav__link">
+        Component Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../react-router/" class="md-nav__link">
         React Router
       </a>
@@ -583,8 +597,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../chakra-ui/" class="md-nav__link">
-        Chakra UI
+      <a href="../browser-storages/" class="md-nav__link">
+        Browser Storages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mantine/" class="md-nav__link">
+        Mantine
       </a>
     </li>
   
@@ -623,6 +651,20 @@
     <li class="md-nav__item">
       <a href="../openapi/" class="md-nav__link">
         OpenAPI (Swagger)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../popular-libraries/" class="md-nav__link">
+        Popular Libraries and other sources
       </a>
     </li>
   
@@ -801,6 +843,39 @@
 
 
 <h1 id="project-structure">Project Structure</h1>
+<p>To have a good <code>software-architecture</code> I can give you a short glimpse about how a React application should be structured.
+There is a framework called <a href="https://nextjs.org/">Next.JS</a>, which always have some groundbreaking ideas on how to build things in React.
+They also defined a React application structure, which is, in my opinion, the current best structure.
+I think that, because I used it in three different React projects and it always went really well.</p>
+<p>So here is the structure:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>my-app/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|- node_modules
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>|- public/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|   |- favicon.ico
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|   |- index.html
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|   |- robots.txt
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|   |- imgs
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|- src/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|   |- index.js
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|   |- pages/
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>|   |   |- index.js
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>|   |   |- about.js
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>|   |   |- products/
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|   |   |   |- index.js
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>|   |   |   |- [id].js
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>|   |- components/
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>|   |   |- Product.js
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>|   |   |- ProductList.js
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>|   |- clients/
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>|   |   |- productService
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>|   |   |   |- index.js
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>|   |   |   |- ...
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>|   |- contexts/
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>|   |   |   |- AuthenticationContext.js
+</code></pre></div>
+</div>
 
 
 
@@ -826,7 +901,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../chakra-ui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chakra UI" rel="prev">
+        <a href="../mantine/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mantine" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -835,7 +910,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Chakra UI
+              Mantine
             </div>
           </div>
         </a>

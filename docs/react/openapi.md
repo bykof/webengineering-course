@@ -3,10 +3,11 @@
 If you have a Swagger file you can generate code by use [openapi-generator](https://openapi-generator.tech/)
 Install openapi-generator according to the `Getting Started`.
 
-You can generate an openapi client by using this:
+You can generate an openapi client by using this: 
 
 ```
-openapi-generator-cli generate -g javascript -o out -i https://webeng.mi.hs-rm.de/docs/json --additional-properties=usePromises=true
+openapi-generator-cli generate \ 
+    -g javascript \
+    -o out \ 
+    -i <insert json swagger endpoint here>
 ```
-
-Demo: [Github Repository](https://github.com/bykof/webengineering-openapi-demo)

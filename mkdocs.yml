@@ -28,10 +28,13 @@ nav:
       - react/context.md
       - react/custom_hooks.md
       - react/fetch_and_useQuery.md
+      - react/component_structure.md
       - react/react-router.md
-      - react/chakra-ui.md
+      - react/browser-storages.md
+      - react/mantine.md
       - react/project_structure.md
       - react/openapi.md
+      - react/popular-libraries.md
   - Exercises:
       - exercises/index.md
       - exercises/promises.md
